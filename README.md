@@ -15,7 +15,23 @@ We have a shared standard for usability (Nielsen's heuristics) and a shared stan
 7. **Preserved context** — don't silently drop what the user provided; keep their inputs visible and honoured.
 8. **Shown provenance** — make output verifiable: show sources, inputs used, or how it was produced.
 
-The full framework — each heuristic's rationale, what good looks like, and its audit question — lives in [`data/heuristics.ts`](data/heuristics.ts) and is rendered on the home page.
+The full framework — each heuristic's rationale, what good looks like, its grounding in prior art, and its audit question — lives in [`data/heuristics.ts`](data/heuristics.ts) and is rendered on the home page.
+
+## Grounding and scope
+
+AXIS doesn't start from zero: each heuristic synthesizes published human-AI interaction research into a form small enough to audit against. The main sources — cited per-heuristic on the framework page and in [`data/references.ts`](data/references.ts):
+
+- **Microsoft, [Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)** (Amershi et al., CHI 2019) — the 18 guidelines, cited here as G1–G18.
+- **Google PAIR, [People + AI Guidebook](https://pair.withgoogle.com/guidebook/)** (2019; generative-AI update 2024).
+- **Apple, [Human Interface Guidelines: Generative AI](https://developer.apple.com/design/human-interface-guidelines/generative-ai)** (2025).
+- **IBM, [Design for AI](https://www.ibm.com/design/ai/)** and **[Design Principles for Generative AI Applications](https://arxiv.org/pdf/2401.14484)** (Weisz et al., CHI 2024).
+- **Nielsen Norman Group** — [Sycophancy in Generative-AI Chatbots](https://www.nngroup.com/articles/sycophancy-generative-ai-chatbots/) (2024) and [AI Chatbots Discourage Error Checking](https://www.nngroup.com/articles/ai-chatbots-discourage-error-checking/) (2025).
+- **Ben Shneiderman, [Human-Centered AI](https://hcil.umd.edu/human-centered-ai/)** (Oxford University Press, 2022).
+- **[NIST AI Risk Management Framework 1.0](https://www.nist.gov/itl/ai-risk-management-framework)** (2023), **[ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html)** and **[ISO/IEC TR 24028:2020](https://www.iso.org/standard/77608.html)**.
+
+Where a heuristic goes beyond the literature — the silently-dropped-input failure mode in *Preserved context* — that is stated on the card rather than presented as established research.
+
+**Scope:** AXIS covers the interaction layer — what a person sees and controls when using an AI feature. Fairness, privacy, and security are essential to trustworthy AI but are system-level concerns with their own frameworks (NIST AI RMF, ISO/IEC 42001); AXIS deliberately does not restate them.
 
 ## Using the Trust Auditor
 

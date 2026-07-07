@@ -25,6 +25,10 @@ export default function HeuristicCard({ heuristic, index }: Props) {
         <strong className="font-medium text-ink">What good looks like: </strong>
         {heuristic.goodLooksLike}
       </p>
+      <p className="mt-auto border-t border-line pt-3 text-sm leading-relaxed text-ink-muted">
+        <strong className="font-medium text-ink">Grounding: </strong>
+        {heuristic.grounding}
+      </p>
     </article>
   );
 }

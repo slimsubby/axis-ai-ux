@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { references } from "@/data/references";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Why AXIS exists, and who maintains it.",
+    "Why AXIS exists, the published research it is grounded in, and who maintains it.",
 };
 
 export default function AboutPage() {
@@ -23,6 +24,50 @@ export default function AboutPage() {
           and an auditor, open source, meant to be argued with and improved.
         </p>
       </div>
+
+      <section id="grounding" aria-labelledby="grounding-heading" className="mt-14">
+        <h2 id="grounding-heading" className="text-lg font-semibold tracking-tight">
+          Grounding
+        </h2>
+        <div className="mt-3 max-w-measure space-y-4 leading-relaxed text-ink-muted">
+          <p>
+            AXIS doesn&apos;t start from zero. Each heuristic synthesizes
+            published human-AI interaction research and platform guidance —
+            the sources below — into a form small enough to audit against.
+            Every heuristic card cites the specific prior art it draws on;
+            where a heuristic goes beyond the literature (the silently-dropped
+            input failure mode in{" "}
+            <em className="not-italic font-medium text-ink">
+              Preserved context
+            </em>
+            ), that is stated rather than hidden.
+          </p>
+          <p>
+            <strong className="font-medium text-ink">Scope:</strong> AXIS
+            covers the interaction layer — what a person sees and controls
+            when using an AI feature. Fairness, privacy, and security are
+            essential to trustworthy AI but are system-level concerns with
+            their own frameworks (NIST AI RMF, ISO/IEC 42001); AXIS
+            deliberately does not restate them.
+          </p>
+        </div>
+        <ul className="mt-6 max-w-measure space-y-4">
+          {references.map((ref) => (
+            <li key={ref.url} className="text-sm leading-relaxed">
+              <a
+                href={ref.url}
+                className="font-medium text-accent-dark underline decoration-line underline-offset-4 hover:decoration-accent"
+              >
+                {ref.title}
+              </a>
+              <span className="text-ink-muted">
+                {" "}
+                — {ref.publisher}, {ref.year}. {ref.note}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section aria-labelledby="author-heading" className="mt-12">
         <h2 id="author-heading" className="text-lg font-semibold tracking-tight">

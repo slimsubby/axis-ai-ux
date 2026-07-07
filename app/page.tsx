@@ -54,7 +54,17 @@ export default function HomePage() {
         <p className="mt-3 max-w-measure leading-relaxed text-ink-muted">
           Each heuristic states a rule, why it matters, and what it looks like
           done well. Together they cover one question: can a person safely
-          rely on what this interface gives them?
+          rely on what this interface gives them? None of it is asserted from
+          nowhere — every heuristic cites the published research it
+          synthesizes, from Microsoft&apos;s Guidelines for Human-AI
+          Interaction to Google&apos;s People + AI Guidebook.{" "}
+          <Link
+            href="/about#grounding"
+            className="font-medium text-accent-dark underline decoration-line underline-offset-4 hover:decoration-accent"
+          >
+            See the full grounding
+          </Link>
+          .
         </p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {heuristics.map((h, i) => (
