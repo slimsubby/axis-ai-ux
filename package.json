@@ -5,8 +5,8 @@
   "description": "AXIS — AI eXperience Integrity Standards. A heuristic framework and interactive auditor for trustworthy AI product interfaces.",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "NEXT_DIST_DIR=.next-build next build",
+    "dev": "NEXT_DIST_DIR=.next-dev next dev",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
