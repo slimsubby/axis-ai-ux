@@ -21,7 +21,7 @@ export default function ScoreSummary({ result }: Props) {
   const { percent, answeredCount, questionCount, perHeuristic } = result;
 
   return (
-    <section aria-labelledby="score-heading" className="rounded-lg border border-line p-6 sm:p-8">
+    <section aria-labelledby="score-heading" className="rounded-xl border border-line bg-surface p-6 sm:p-7">
       <h2 id="score-heading" className="text-lg font-semibold tracking-tight">
         Score
       </h2>
