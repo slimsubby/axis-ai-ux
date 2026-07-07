@@ -6,6 +6,9 @@ const nextConfig = {
   // GitHub Pages serves directories, not rewrites — trailing slashes make
   // /audit resolve to /audit/index.html.
   trailingSlash: true,
+  // `npm run build` (see package.json) uses a separate cache directory so a
+  // production build can never corrupt a running dev server's .next cache.
+  distDir: process.env.NEXT_DIST_DIR || ".next",
 };
 
 export default nextConfig;
