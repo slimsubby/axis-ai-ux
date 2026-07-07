@@ -5,24 +5,28 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
   ],
+  // Dark mode is toggled by adding .dark to <html> (see ThemeToggle and the
+  // inline script in app/layout.tsx). Colours are CSS variables defined in
+  // app/globals.css, so both themes share these class names.
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         // Single accent colour, used sparingly. Everything else is ink/paper.
         accent: {
-          DEFAULT: "#2C46E0",
-          // Darkened variant that still passes AA on white for small text.
-          dark: "#2338B8",
-          // Very light tint for backgrounds behind accent-coloured text.
-          wash: "#EEF1FD",
+          DEFAULT: "#2C46E0", // button fill — white text passes AA in both themes
+          // Accent-coloured text: darkened on white, lightened on dark paper.
+          dark: "var(--color-accent-text)",
+          // Subtle tint for backgrounds behind accent-coloured text.
+          wash: "var(--color-accent-wash)",
         },
         ink: {
-          DEFAULT: "#16181D", // near-black body text
-          muted: "#5A6070",   // secondary text — ≈6.3:1 on white, passes AA
-          faint: "#8A8F9C",   // ≈3.2:1 on white — borders/decoration only, never text
+          DEFAULT: "var(--color-ink)",       // body text
+          muted: "var(--color-ink-muted)",   // secondary text — AA in both themes
+          faint: "var(--color-ink-faint)",   // borders/decoration only, never text
         },
-        paper: "#FFFFFF",
-        line: "#E5E7EB",
+        paper: "var(--color-paper)",
+        line: "var(--color-line)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

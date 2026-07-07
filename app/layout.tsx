@@ -23,8 +23,19 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    // suppressHydrationWarning: the theme script below may add .dark to
+    // <html> before React hydrates, which is intentional.
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col font-sans">
+        {/*
+          Apply the saved (or system) theme before first paint so dark-mode
+          users never see a white flash. Must stay inline and synchronous.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("axis-theme");var d=t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d)}catch(e){}})()`,
+          }}
+        />
         {/* Skip link for keyboard and screen-reader users (WCAG 2.4.1). */}
         <a
           href="#main"

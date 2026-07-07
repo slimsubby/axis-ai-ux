@@ -42,6 +42,8 @@ Open **/audit**, pick one AI feature (a summariser, an agent, an autocomplete â€
 - **Copy report** puts a plain-text summary on your clipboard for sharing in a doc, an issue, or Slack.
 - Answers persist in `localStorage`, so a refresh doesn't lose progress. Nothing leaves your browser â€” there is no backend.
 
+The site follows your system's light/dark preference and has a manual toggle in the navigation; both themes meet WCAG 2.1 AA contrast.
+
 ## Running locally
 
 ```bash

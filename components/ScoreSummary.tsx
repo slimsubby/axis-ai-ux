@@ -7,10 +7,10 @@ import { statusLabel } from "@/lib/scoring";
 // always accompanies it (WCAG 1.4.1).
 const STATUS_STYLES: Record<HeuristicStatus, string> = {
   pass: "bg-accent-wash text-accent-dark",
-  partial: "bg-amber-50 text-amber-800",
-  fail: "bg-red-50 text-red-800",
-  na: "bg-gray-100 text-ink-muted",
-  unanswered: "bg-gray-100 text-ink-muted",
+  partial: "bg-amber-50 text-amber-800 dark:bg-amber-950 dark:text-amber-300",
+  fail: "bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-300",
+  na: "bg-gray-100 text-ink-muted dark:bg-gray-800",
+  unanswered: "bg-gray-100 text-ink-muted dark:bg-gray-800",
 };
 
 type Props = {

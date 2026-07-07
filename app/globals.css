@@ -3,6 +3,36 @@
 @tailwind utilities;
 
 @layer base {
+  /*
+   * Theme palettes. Tailwind's semantic colour names (paper, ink, line,
+   * accent-*) resolve to these variables — see tailwind.config.ts — so
+   * components never need per-theme classes for the core palette.
+   * All text/background pairs pass WCAG AA in both themes.
+   */
+  :root {
+    --color-paper: #ffffff;
+    --color-ink: #16181d;
+    --color-ink-muted: #5a6070; /* ≈6.3:1 on paper */
+    --color-ink-faint: #8a8f9c;
+    --color-line: #e5e7eb;
+    --color-accent-text: #2338b8; /* ≈9:1 on paper */
+    --color-accent-wash: #eef1fd;
+    --color-focus: #2c46e0;
+    color-scheme: light;
+  }
+
+  .dark {
+    --color-paper: #101218;
+    --color-ink: #e8eaf0;
+    --color-ink-muted: #a6acbb; /* ≈8:1 on dark paper */
+    --color-ink-faint: #6b7180;
+    --color-line: #262a33;
+    --color-accent-text: #97a7f8; /* ≈8:1 on dark paper */
+    --color-accent-wash: #1a2140;
+    --color-focus: #97a7f8;
+    color-scheme: dark;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -19,7 +49,7 @@
 
   /* One consistent, clearly visible focus style everywhere (WCAG 2.4.7). */
   :focus-visible {
-    outline: 2px solid #2c46e0;
+    outline: 2px solid var(--color-focus);
     outline-offset: 2px;
     border-radius: 2px;
   }

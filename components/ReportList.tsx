@@ -67,8 +67,8 @@ export default function ReportList({ result }: Props) {
                   className={
                     "mt-0.5 shrink-0 rounded px-2 py-0.5 text-xs font-medium " +
                     (rec.answer === "no"
-                      ? "bg-red-50 text-red-800"
-                      : "bg-amber-50 text-amber-800")
+                      ? "bg-red-50 text-red-800 dark:bg-red-950 dark:text-red-300"
+                      : "bg-amber-50 text-amber-800 dark:bg-amber-950 dark:text-amber-300")
                   }
                 >
                   {rec.answer === "no" ? "Fail" : "Partial"}
