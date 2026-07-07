@@ -20,7 +20,7 @@ export default function HeuristicCard({ heuristic, index }: Props) {
     <article
       id={heuristic.id}
       aria-labelledby={`${heuristic.id}-name`}
-      className="flex flex-col rounded-xl border border-line bg-surface p-6 transition-colors hover:border-ink-faint sm:p-7"
+      className="flex flex-col rounded-xl border border-line bg-surface p-6 transition-colors hover:border-ink-faint sm:p-8"
     >
       <div className="flex items-center gap-3">
         <span className="text-sm font-semibold tabular-nums text-accent-dark">
@@ -36,17 +36,17 @@ export default function HeuristicCard({ heuristic, index }: Props) {
       </h3>
       <p className="mt-2 font-medium leading-relaxed">{heuristic.principle}</p>
       <CardLabel>Why it matters</CardLabel>
-      <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
+      <p className="mt-1.5 text-base leading-relaxed text-ink-muted">
         {heuristic.why}
       </p>
       <CardLabel>What good looks like</CardLabel>
-      <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
+      <p className="mt-1.5 text-base leading-relaxed text-ink-muted">
         {heuristic.goodLooksLike}
       </p>
       {/* mt-auto pins grounding to the bottom so grid rows align. */}
       <div className="mt-auto">
         <CardLabel>Grounding</CardLabel>
-        <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
+        <p className="mt-1.5 text-base leading-relaxed text-ink-muted">
           {heuristic.grounding}
         </p>
       </div>
