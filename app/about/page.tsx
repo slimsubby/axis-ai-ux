@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-[88rem] px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="text-3xl font-semibold tracking-tight">About AXIS</h1>
-      <div className="mt-6 max-w-4xl space-y-4 leading-relaxed text-ink-muted">
+      <div className="mt-6 space-y-4 leading-relaxed text-ink-muted">
         <p>
           AXIS exists because AI features are shipping faster than the design
           discipline around them. Teams have Nielsen's heuristics for
@@ -29,7 +29,7 @@ export default function AboutPage() {
         <h2 id="grounding-heading" className="text-lg font-semibold tracking-tight">
           Grounding
         </h2>
-        <div className="mt-3 max-w-4xl space-y-4 leading-relaxed text-ink-muted">
+        <div className="mt-3 space-y-4 leading-relaxed text-ink-muted">
           <p>
             AXIS doesn&apos;t start from zero. Each heuristic synthesizes
             published human-AI interaction research and platform guidance (the
@@ -51,7 +51,7 @@ export default function AboutPage() {
             deliberately does not restate them.
           </p>
         </div>
-        <ul className="mt-6 max-w-4xl space-y-4">
+        <ul className="mt-6 space-y-4">
           {references.map((ref) => (
             <li key={ref.url} className="text-sm leading-relaxed">
               <a
@@ -72,7 +72,7 @@ export default function AboutPage() {
         <h2 id="author-heading" className="text-lg font-semibold tracking-tight">
           Author
         </h2>
-        <p className="mt-3 max-w-4xl leading-relaxed text-ink-muted">
+        <p className="mt-3 leading-relaxed text-ink-muted">
           Created and maintained by{" "}
           <span className="font-medium text-ink">Bello Teslim Olasubomi</span>,
           a product designer working on AI interfaces.

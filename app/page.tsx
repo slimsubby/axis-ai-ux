@@ -10,10 +10,10 @@ export default function HomePage() {
         <p className="text-sm font-medium uppercase tracking-widest text-accent-dark">
           An open standard, v1
         </p>
-        <h1 className="mt-4 max-w-5xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+        <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           Heuristics for trustworthy AI interfaces
         </h1>
-        <div className="mt-6 max-w-4xl space-y-4 text-lg leading-relaxed text-ink-muted">
+        <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink-muted">
           <p>
             We have a shared standard for usability and a shared standard for
             accessibility. There is no equivalent for whether an AI interface
@@ -51,7 +51,7 @@ export default function HomePage() {
         >
           The eight heuristics
         </h2>
-        <p className="mt-3 max-w-4xl leading-relaxed text-ink-muted">
+        <p className="mt-3 leading-relaxed text-ink-muted">
           Each heuristic states a rule, why it matters, and what it looks like
           done well. Together they cover one question: can a person safely
           rely on what this interface gives them? None of it is asserted from
