@@ -9,7 +9,7 @@ export default function Footer() {
         <p>
           A living standard.{" "}
           <a
-            href="https://github.com"
+            href="https://github.com/slimsubby/axis-ai-ux"
             className="underline decoration-line underline-offset-4 hover:text-ink"
           >
             Contributions welcome
