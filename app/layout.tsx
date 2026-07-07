@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   },
   description:
     "An open heuristic framework for trustworthy AI product interfaces, plus an interactive Trust Auditor that scores your AI feature against it.",
+  authors: [
+    { name: "Bello Teslim Olasubomi", url: "https://slimsubbydesigns.webflow.io/" },
+  ],
+  creator: "Bello Teslim Olasubomi",
 };
 
 export default function RootLayout({

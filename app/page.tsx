@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* Hero: left-aligned, wide text column. */}
       <section className="py-16 sm:py-24">
         <p className="text-sm font-medium uppercase tracking-widest text-accent-dark">
-          An open standard, v1
+          An open standard, v1 · by Bello Teslim Olasubomi
         </p>
         <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           Heuristics for trustworthy AI interfaces
