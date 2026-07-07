@@ -10,7 +10,7 @@ const OPTIONS: { value: Answer; label: string }[] = [
 ];
 
 type Props = {
-  /** Unique key for this question — doubles as the radio group name. */
+  /** Unique key for this question - doubles as the radio group name. */
   name: string;
   question: string;
   value: Answer | undefined;
@@ -19,7 +19,7 @@ type Props = {
 
 /**
  * One audit question as a native radio group. Native inputs inside a
- * fieldset give us correct semantics and arrow-key navigation for free —
+ * fieldset give us correct semantics and arrow-key navigation for free -
  * no ARIA re-implementation needed.
  */
 export default function AuditQuestion({ name, question, value, onChange }: Props) {

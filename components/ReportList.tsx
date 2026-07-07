@@ -56,7 +56,7 @@ export default function ReportList({ result }: Props) {
         <p className="mt-4 text-sm leading-relaxed text-ink-muted">
           {result.answeredCount === 0
             ? "Fixes will appear here for every question answered “No” or “Partly”."
-            : "No fixes needed so far — everything answered passes."}
+            : "No fixes needed so far. Everything answered passes."}
         </p>
       ) : (
         <ol className="mt-4 space-y-4">

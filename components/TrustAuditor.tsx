@@ -18,7 +18,7 @@ const STORAGE_KEY = "axis-audit-v1";
 
 const VALID_ANSWERS = new Set<Answer>(["yes", "partly", "no", "na"]);
 
-/** Parse saved answers defensively — localStorage contents are untrusted. */
+/** Parse saved answers defensively - localStorage contents are untrusted. */
 function loadSavedAnswers(): AnswerMap {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
@@ -35,7 +35,7 @@ function loadSavedAnswers(): AnswerMap {
   }
 }
 
-// TODO v2: AI-assisted audit mode — a "paste your feature description"
+// TODO v2: AI-assisted audit mode - a "paste your feature description"
 // textarea that sends the description plus the heuristics to an LLM and
 // pre-fills suggested answers for the user to review (never to auto-submit;
 // see heuristic 2, Reviewable output). Deliberately out of scope for v1 to
@@ -56,7 +56,7 @@ export default function TrustAuditor() {
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
     } catch {
-      // Storage full or blocked — the audit still works, it just won't persist.
+      // Storage full or blocked - the audit still works, it just won't persist.
     }
   }, [answers, hydrated]);
 
@@ -71,7 +71,7 @@ export default function TrustAuditor() {
   }
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[1fr_20rem] lg:items-start">
+    <div className="grid gap-10 lg:grid-cols-[1fr_22rem] lg:items-start xl:gap-14 xl:grid-cols-[1fr_26rem]">
       {/* Questions */}
       <div>
         <ol className="space-y-10">
@@ -121,7 +121,7 @@ export default function TrustAuditor() {
         </div>
       </div>
 
-      {/* Results — sticky on large screens so the score tracks your answers. */}
+      {/* Results - sticky on large screens so the score tracks your answers. */}
       <aside aria-label="Audit results" className="space-y-5 lg:sticky lg:top-8">
         <ScoreSummary result={result} />
         <ReportList result={result} />

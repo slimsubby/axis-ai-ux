@@ -17,10 +17,10 @@ export type Reference = {
 export const references: Reference[] = [
   {
     title: "Guidelines for Human-AI Interaction (HAX Toolkit)",
-    publisher: "Microsoft Research — Amershi et al.",
+    publisher: "Microsoft Research (Amershi et al.)",
     year: "CHI 2019",
     url: "https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/",
-    note: "18 evidence-based guidelines for how AI systems should behave — before, during, and after things go wrong. AXIS cites these as G1–G18.",
+    note: "18 evidence-based guidelines for how AI systems should behave before, during, and after things go wrong. AXIS cites these as G1 to G18.",
   },
   {
     title: "People + AI Guidebook",
@@ -39,7 +39,7 @@ export const references: Reference[] = [
   {
     title: "IBM Design for AI",
     publisher: "IBM",
-    year: "2019–present",
+    year: "2019 to present",
     url: "https://www.ibm.com/design/ai/",
     note: "Ethics-grounded fundamentals for AI products; Carbon for AI gives AI-generated content a visually distinct identity.",
   },
@@ -52,24 +52,24 @@ export const references: Reference[] = [
   },
   {
     title: "Sycophancy in Generative-AI Chatbots",
-    publisher: "Nielsen Norman Group — Caleb Sponheim",
+    publisher: "Nielsen Norman Group (Caleb Sponheim)",
     year: "2024",
     url: "https://www.nngroup.com/articles/sycophancy-generative-ai-chatbots/",
-    note: "Documents models agreeing with users to win approval — a core honest-expectations failure.",
+    note: "Documents models agreeing with users to win approval, a core honest-expectations failure.",
   },
   {
     title: "AI Chatbots Discourage Error Checking",
-    publisher: "Nielsen Norman Group — Pavel Samsonov",
+    publisher: "Nielsen Norman Group (Pavel Samsonov)",
     year: "2025",
     url: "https://www.nngroup.com/articles/ai-chatbots-discourage-error-checking/",
-    note: "Shows that confident, polished output suppresses verification — why visible confidence and provenance matter.",
+    note: "Shows that confident, polished output suppresses verification; this is why visible confidence and provenance matter.",
   },
   {
     title: "Human-Centered AI",
-    publisher: "Ben Shneiderman — Oxford University Press",
+    publisher: "Ben Shneiderman, Oxford University Press",
     year: "2022",
     url: "https://hcil.umd.edu/human-centered-ai/",
-    note: "Argues high automation and high human control can — and must — coexist.",
+    note: "Argues high automation and high human control can, and must, coexist.",
   },
   {
     title: "NIST AI Risk Management Framework (AI RMF 1.0)",
@@ -79,14 +79,14 @@ export const references: Reference[] = [
     note: "Defines seven trustworthiness characteristics at the system level, including transparency and explainability.",
   },
   {
-    title: "ISO/IEC 42001:2023 — AI management systems",
+    title: "ISO/IEC 42001:2023, AI management systems",
     publisher: "ISO/IEC JTC 1/SC 42",
     year: "2023",
     url: "https://www.iso.org/standard/81230.html",
     note: "The certifiable standard for organization-level AI governance, including human oversight requirements.",
   },
   {
-    title: "ISO/IEC TR 24028:2020 — Overview of trustworthiness in AI",
+    title: "ISO/IEC TR 24028:2020, Overview of trustworthiness in AI",
     publisher: "ISO/IEC JTC 1/SC 42",
     year: "2020",
     url: "https://www.iso.org/standard/77608.html",

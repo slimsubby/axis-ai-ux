@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function AuditPage() {
   return (
-    <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
+    <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="text-3xl font-semibold tracking-tight">Trust Auditor</h1>
       <p className="mt-4 max-w-measure leading-relaxed text-ink-muted">
-        Pick one AI feature — a summariser, an agent, an autocomplete — and
+        Pick one AI feature (a summariser, an agent, an autocomplete) and
         answer each question about it honestly. Answers save automatically in
         your browser; nothing leaves your device.
       </p>

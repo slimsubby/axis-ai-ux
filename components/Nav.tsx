@@ -17,11 +17,11 @@ export default function Nav() {
     <header className="border-b border-line">
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-5xl items-center justify-between gap-6 px-5 py-4 sm:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8"
       >
         <Link href="/" className="text-sm font-semibold tracking-tight">
           AXIS
-          <span className="sr-only"> — AI eXperience Integrity Standards</span>
+          <span className="sr-only">: AI eXperience Integrity Standards</span>
         </Link>
         <div className="flex items-center gap-5 sm:gap-8">
           <ul className="flex items-baseline gap-5 sm:gap-8">

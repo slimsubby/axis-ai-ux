@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
  * preference unless the user has chosen). Choices persist in localStorage.
  */
 export default function ThemeToggle() {
-  // null until mounted — the server can't know the theme, so we render a
+  // null until mounted - the server can't know the theme, so we render a
   // neutral placeholder first to avoid a hydration mismatch.
   const [isDark, setIsDark] = useState<boolean | null>(null);
 
@@ -23,7 +23,7 @@ export default function ThemeToggle() {
     try {
       window.localStorage.setItem("axis-theme", next ? "dark" : "light");
     } catch {
-      // Storage blocked — the toggle still works for this page view.
+      // Storage blocked - the toggle still works for this page view.
     }
   }
 

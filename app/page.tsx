@@ -4,7 +4,7 @@ import { heuristics } from "@/data/heuristics";
 
 export default function HomePage() {
   return (
-    <div className="mx-auto max-w-5xl px-5 sm:px-8">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
       {/* Hero */}
       <section className="py-16 sm:py-24">
         <p className="text-sm font-medium uppercase tracking-widest text-accent-dark">
@@ -17,9 +17,9 @@ export default function HomePage() {
           <p>
             We have a shared standard for usability and a shared standard for
             accessibility. There is no equivalent for whether an AI interface
-            is <em className="text-ink not-italic font-medium">trustworthy</em>{" "}
-            — whether it shows its uncertainty, lets people review and correct
-            output, and keeps humans in control of what matters.
+            is <em className="text-ink not-italic font-medium">trustworthy</em>:
+            does it show its uncertainty, let people review and correct output,
+            and keep humans in control of what matters?
           </p>
           <p>
             AXIS is a concise, opinionated set of eight heuristics for AI
@@ -55,7 +55,7 @@ export default function HomePage() {
           Each heuristic states a rule, why it matters, and what it looks like
           done well. Together they cover one question: can a person safely
           rely on what this interface gives them? None of it is asserted from
-          nowhere — every heuristic cites the published research it
+          nowhere; every heuristic cites the published research it
           synthesizes, from Microsoft&apos;s Guidelines for Human-AI
           Interaction to Google&apos;s People + AI Guidebook.{" "}
           <Link
@@ -66,7 +66,7 @@ export default function HomePage() {
           </Link>
           .
         </p>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {heuristics.map((h, i) => (
             <HeuristicCard key={h.id} heuristic={h} index={i + 1} />
           ))}

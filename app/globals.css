@@ -5,7 +5,7 @@
 @layer base {
   /*
    * Theme palettes. Tailwind's semantic colour names (paper, ink, line,
-   * accent-*) resolve to these variables — see tailwind.config.ts — so
+   * accent-*) resolve to these variables - see tailwind.config.ts - so
    * components never need per-theme classes for the core palette.
    * All text/background pairs pass WCAG AA in both themes.
    */
@@ -15,6 +15,7 @@
     --color-ink-muted: #5a6070; /* ≈6.3:1 on paper */
     --color-ink-faint: #8a8f9c;
     --color-line: #e5e7eb;
+    --color-surface: #f8f9fb; /* card background, one step off the page */
     --color-accent-text: #2338b8; /* ≈9:1 on paper */
     --color-accent-wash: #eef1fd;
     --color-focus: #2c46e0;
@@ -27,6 +28,7 @@
     --color-ink-muted: #a6acbb; /* ≈8:1 on dark paper */
     --color-ink-faint: #6b7180;
     --color-line: #262a33;
+    --color-surface: #161a23; /* card background, one step off the page */
     --color-accent-text: #97a7f8; /* ≈8:1 on dark paper */
     --color-accent-wash: #1a2140;
     --color-focus: #97a7f8;

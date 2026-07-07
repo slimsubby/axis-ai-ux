@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8 sm:py-24">
+    <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="text-3xl font-semibold tracking-tight">About AXIS</h1>
       <div className="mt-6 max-w-measure space-y-4 leading-relaxed text-ink-muted">
         <p>
@@ -20,7 +20,7 @@ export default function AboutPage() {
           <em className="not-italic font-medium text-ink">
             can I trust what this thing just gave me?
           </em>{" "}
-          AXIS is a first attempt at that shared standard — eight heuristics
+          AXIS is a first attempt at that shared standard: eight heuristics
           and an auditor, open source, meant to be argued with and improved.
         </p>
       </div>
@@ -32,8 +32,8 @@ export default function AboutPage() {
         <div className="mt-3 max-w-measure space-y-4 leading-relaxed text-ink-muted">
           <p>
             AXIS doesn&apos;t start from zero. Each heuristic synthesizes
-            published human-AI interaction research and platform guidance —
-            the sources below — into a form small enough to audit against.
+            published human-AI interaction research and platform guidance (the
+            sources below) into a form small enough to audit against.
             Every heuristic card cites the specific prior art it draws on;
             where a heuristic goes beyond the literature (the silently-dropped
             input failure mode in{" "}
@@ -44,7 +44,7 @@ export default function AboutPage() {
           </p>
           <p>
             <strong className="font-medium text-ink">Scope:</strong> AXIS
-            covers the interaction layer — what a person sees and controls
+            covers the interaction layer: what a person sees and controls
             when using an AI feature. Fairness, privacy, and security are
             essential to trustworthy AI but are system-level concerns with
             their own frameworks (NIST AI RMF, ISO/IEC 42001); AXIS
@@ -61,8 +61,7 @@ export default function AboutPage() {
                 {ref.title}
               </a>
               <span className="text-ink-muted">
-                {" "}
-                — {ref.publisher}, {ref.year}. {ref.note}
+                {" "}({ref.publisher}, {ref.year}). {ref.note}
               </span>
             </li>
           ))}

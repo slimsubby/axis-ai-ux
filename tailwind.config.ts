@@ -14,7 +14,7 @@ const config: Config = {
       colors: {
         // Single accent colour, used sparingly. Everything else is ink/paper.
         accent: {
-          DEFAULT: "#2C46E0", // button fill — white text passes AA in both themes
+          DEFAULT: "#2C46E0", // button fill - white text passes AA in both themes
           // Accent-coloured text: darkened on white, lightened on dark paper.
           dark: "var(--color-accent-text)",
           // Subtle tint for backgrounds behind accent-coloured text.
@@ -22,10 +22,11 @@ const config: Config = {
         },
         ink: {
           DEFAULT: "var(--color-ink)",       // body text
-          muted: "var(--color-ink-muted)",   // secondary text — AA in both themes
+          muted: "var(--color-ink-muted)",   // secondary text - AA in both themes
           faint: "var(--color-ink-faint)",   // borders/decoration only, never text
         },
         paper: "var(--color-paper)",
+        surface: "var(--color-surface)",
         line: "var(--color-line)",
       },
       fontFamily: {

@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "AXIS — AI eXperience Integrity Standards",
+    default: "AXIS: AI eXperience Integrity Standards",
     template: "%s · AXIS",
   },
   description:

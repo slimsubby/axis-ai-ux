@@ -3,7 +3,7 @@
 import type { AuditResult, HeuristicStatus } from "@/lib/scoring";
 import { statusLabel } from "@/lib/scoring";
 
-// Status chip styles — colour is never the only signal; the text label
+// Status chip styles - colour is never the only signal; the text label
 // always accompanies it (WCAG 1.4.1).
 const STATUS_STYLES: Record<HeuristicStatus, string> = {
   pass: "bg-accent-wash text-accent-dark",

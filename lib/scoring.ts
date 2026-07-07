@@ -33,13 +33,13 @@ export type HeuristicResult = {
 
 export type AuditResult = {
   perHeuristic: HeuristicResult[];
-  /** 0–100, or null when nothing applicable has been answered yet. */
+  /** 0-100, or null when nothing applicable has been answered yet. */
   percent: number | null;
   answeredCount: number;
   questionCount: number;
 };
 
-/** Stable key for one question's answer — used in state and localStorage. */
+/** Stable key for one question's answer - used in state and localStorage. */
 export function questionKey(heuristicId: string, questionIndex: number): string {
   return `${heuristicId}:${questionIndex}`;
 }
@@ -71,7 +71,7 @@ export function scoreHeuristic(
     }
   });
 
-  // "No" failures are more urgent than "Partly" — surface them first.
+  // "No" failures are more urgent than "Partly" - surface them first.
   recommendations.sort((a, b) => pointsFor(a.answer) - pointsFor(b.answer));
 
   let status: HeuristicStatus;
@@ -129,12 +129,12 @@ export function statusLabel(status: HeuristicStatus): string {
 }
 
 /**
- * Plain-text report for the "Copy report" button — readable when pasted
+ * Plain-text report for the "Copy report" button - readable when pasted
  * into a doc, an issue, or a Slack message.
  */
 export function buildTextReport(result: AuditResult): string {
   const lines: string[] = [];
-  lines.push("AXIS Trust Audit — AI eXperience Integrity Standards");
+  lines.push("AXIS Trust Audit: AI eXperience Integrity Standards");
   lines.push(
     result.percent === null
       ? "Overall score: n/a (no applicable questions answered)"
@@ -151,7 +151,7 @@ export function buildTextReport(result: AuditResult): string {
 
   const fixes = result.perHeuristic
     .filter((r) => r.recommendations.length > 0)
-    // Fails before partials — same priority order as the on-screen report.
+    // Fails before partials - same priority order as the on-screen report.
     .sort((a, b) => (a.status === "fail" ? 0 : 1) - (b.status === "fail" ? 0 : 1));
 
   if (fixes.length > 0) {

@@ -1,5 +1,5 @@
 /**
- * AXIS — AI eXperience Integrity Standards, v1.
+ * AXIS: AI eXperience Integrity Standards, v1.
  *
  * Eight heuristics for trustworthy AI product interfaces. Each heuristic
  * carries the audit questions used by the Trust Auditor (/audit), so the
@@ -16,17 +16,17 @@ export type Question = {
 };
 
 export type Heuristic = {
-  /** Stable slug — used for anchors, audit answer keys, and localStorage. */
+  /** Stable slug - used for anchors, audit answer keys, and localStorage. */
   id: string;
   name: string;
   /** One-line statement of the rule. */
   principle: string;
-  /** Why the rule exists — what goes wrong without it. */
+  /** Why the rule exists - what goes wrong without it. */
   why: string;
   /** A concrete picture of the rule done well. */
   goodLooksLike: string;
   /**
-   * Prior art this heuristic synthesizes — cited so the standard is
+   * Prior art this heuristic synthesizes - cited so the standard is
    * verifiable, not asserted. "HAX Gn" = Microsoft's Guidelines for
    * Human-AI Interaction, guideline n. Full sources: data/references.ts.
    */
@@ -40,7 +40,7 @@ export const heuristics: Heuristic[] = [
     name: "Visible confidence",
     principle:
       "Signal how sure the system is, and mark the parts it is least sure about.",
-    why: "AI output arrives with uniform, flat confidence — a guess reads exactly like a fact. Surfacing uncertainty tells people where to slow down and check, instead of trusting every sentence equally. A system that admits what it doesn't know earns more trust than one that never hesitates.",
+    why: "AI output arrives with uniform, flat confidence; a guess reads exactly like a fact. Surfacing uncertainty tells people where to slow down and check, instead of trusting every sentence equally. A system that admits what it doesn't know earns more trust than one that never hesitates.",
     goodLooksLike:
       "Low-confidence spans are visually distinguished, and the system has a genuine “I'm not sure” state instead of a confident wrong answer.",
     grounding:
@@ -60,7 +60,7 @@ export const heuristics: Heuristic[] = [
       "Let people see and inspect what the AI produced before it is used or sent.",
     why: "If output is applied automatically or buried behind a summary, users have no moment in which to catch errors. Review has to be a designed step in the flow, not something users improvise after the fact.",
     goodLooksLike:
-      "A clear review state that shows exactly what was generated — in full — before anything is done with it.",
+      "A clear review state that shows exactly what was generated, in full, before anything is done with it.",
     grounding:
       "Apple HIG, Generative AI · IBM design principles for generative AI (CHI 2024) · Shneiderman, Human-Centered AI",
     questions: [
@@ -76,7 +76,7 @@ export const heuristics: Heuristic[] = [
     name: "Cheap correction",
     principle:
       "Allow editing or overriding output in place; never force a full restart to fix one thing.",
-    why: "If fixing a small error means regenerating everything, correction becomes expensive — so people stop correcting. They either accept flawed output or abandon the tool. The cost of a fix should be proportional to the size of the mistake.",
+    why: "If fixing a small error means regenerating everything, correction becomes expensive, so people stop correcting. They either accept flawed output or abandon the tool. The cost of a fix should be proportional to the size of the mistake.",
     goodLooksLike:
       "Inline editing and per-item accept/reject controls, not a single all-or-nothing “regenerate” button.",
     grounding:
@@ -94,11 +94,11 @@ export const heuristics: Heuristic[] = [
     name: "Graceful recovery",
     principle:
       "Provide a clear way back when the AI is wrong: undo, retry, or escalate.",
-    why: "These systems fail — that is a design constraint, not an edge case. A product with no recovery path turns a model error into a user dead-end, and dead-ends are where trust goes to die.",
+    why: "These systems fail; that is a design constraint, not an edge case. A product with no recovery path turns a model error into a user dead-end, and dead-ends are where trust goes to die.",
     goodLooksLike:
       "Obvious undo and retry actions, plus a route to a human or a manual mode when the AI can't get it right.",
     grounding:
-      "Microsoft HAX G8–G9 · Google PAIR (Errors + Graceful Failure) · Nielsen's usability heuristic 9 (error recovery)",
+      "Microsoft HAX G8 and G9 · Google PAIR (Errors + Graceful Failure) · Nielsen's usability heuristic 9 (error recovery)",
     questions: [
       {
         q: "Is there a clear recovery path when the output is wrong?",
@@ -116,12 +116,12 @@ export const heuristics: Heuristic[] = [
     goodLooksLike:
       "A deliberate, explicit confirmation before actions that spend money, send messages, or can't be undone.",
     grounding:
-      "Shneiderman, Human-Centered AI · Microsoft HAX G16–G17 · Apple HIG, Generative AI · ISO/IEC 42001 (human oversight)",
+      "Shneiderman, Human-Centered AI · Microsoft HAX G16 and G17 · Apple HIG, Generative AI · ISO/IEC 42001 (human oversight)",
     questions: [
       {
         q: "Do consequential or irreversible actions require explicit human confirmation?",
         recommendationIfFail:
-          "Gate high-impact actions behind a clear, explicit confirmation step — never let them fire as a side effect.",
+          "Gate high-impact actions behind a clear, explicit confirmation step; never let them fire as a side effect.",
       },
     ],
   },
@@ -130,11 +130,11 @@ export const heuristics: Heuristic[] = [
     name: "Honest expectations",
     principle:
       "Don't imply certainty or ability the system lacks; label AI-generated content.",
-    why: "Overselling the AI sets users up to over-trust it — and the crash that follows is worse than modest expectations up front. Clear labelling and honest framing protect both the user and their long-term trust in the product.",
+    why: "Overselling the AI sets users up to over-trust it, and the crash that follows is worse than modest expectations up front. Clear labelling and honest framing protect both the user and their long-term trust in the product.",
     goodLooksLike:
       "AI-generated content carries a visible label, and interface copy avoids promising accuracy the model can't guarantee.",
     grounding:
-      "Microsoft HAX G1–G2 · IBM Carbon for AI (labelling AI content) · Google PAIR (Mental Models) · NN/g research on sycophancy and over-trust",
+      "Microsoft HAX G1 and G2 · IBM Carbon for AI (labelling AI content) · Google PAIR (Mental Models) · NN/g research on sycophancy and over-trust",
     questions: [
       {
         q: "Is AI-generated content labelled, and does the framing avoid implying false certainty?",
@@ -148,11 +148,11 @@ export const heuristics: Heuristic[] = [
     name: "Preserved context",
     principle:
       "Don't silently drop what the user provided; keep their inputs visible and honoured.",
-    why: "When a system quietly loses context the user gave it earlier, it produces confident output that ignores real constraints — and because nothing looks wrong, the failure is hard to spot. Users shouldn't have to re-check that their own inputs were used.",
+    why: "When a system quietly loses context the user gave it earlier, it produces confident output that ignores real constraints, and because nothing looks wrong, the failure is hard to spot. Users shouldn't have to re-check that their own inputs were used.",
     goodLooksLike:
       "The user's key inputs stay visible through the flow, and the output demonstrably reflects them.",
     grounding:
-      "Microsoft HAX G12 (remember recent interactions) — the silent-loss failure mode itself is AXIS's own contribution",
+      "Microsoft HAX G12 (remember recent interactions); the silent-loss failure mode itself is AXIS's own contribution",
     questions: [
       {
         q: "Does the system keep and honour the context the user provided, visibly?",
@@ -166,7 +166,7 @@ export const heuristics: Heuristic[] = [
     name: "Shown provenance",
     principle:
       "Make output verifiable: show sources, inputs used, or how it was produced.",
-    why: "Verifiability is the basis of trust in professional settings. If users can't check where something came from, they can't responsibly rely on it — no matter how good it looks.",
+    why: "Verifiability is the basis of trust in professional settings. If users can't check where something came from, they can't responsibly rely on it, no matter how good it looks.",
     goodLooksLike:
       "Citations, source references, or a visible trail showing what the output was based on.",
     grounding:
