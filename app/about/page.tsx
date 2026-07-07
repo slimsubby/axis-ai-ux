@@ -73,14 +73,14 @@ export default function AboutPage() {
           Author
         </h2>
         <p className="mt-3 leading-relaxed text-ink-muted">
-          Created and maintained by{" "}
+          I&apos;m{" "}
           <span className="font-medium text-ink">Bello Teslim Olasubomi</span>,
-          a product designer working on AI interfaces. Trustworthy AI is his
-          daily practice rather than a side interest: he designs AI-assisted
-          QA tooling in his day job, and his MSc research examines how
-          transparency should be designed in AI-assisted QA workflows. AXIS
-          distils the same concerns into a standard any AI product team can
-          use.
+          a product designer working on AI interfaces. Trustworthy AI is my
+          daily practice rather than a side interest: I design AI-assisted QA
+          tooling in my day job, and my MSc research examines how transparency
+          should be designed in AI-assisted QA workflows. I created and
+          maintain AXIS to distil the same concerns into a standard any AI
+          product team can use.
         </p>
         <ul className="mt-4 flex flex-wrap gap-6 text-sm">
           <li>
