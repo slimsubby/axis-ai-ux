@@ -17,7 +17,7 @@ export default function Nav() {
     <header className="border-b border-line">
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8"
+        className="mx-auto flex max-w-[88rem] items-center justify-between gap-6 px-5 py-4 sm:px-8"
       >
         <Link href="/" className="text-sm font-semibold tracking-tight">
           AXIS

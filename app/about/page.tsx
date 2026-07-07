@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+    <div className="mx-auto max-w-[88rem] px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="text-3xl font-semibold tracking-tight">About AXIS</h1>
       <div className="mt-6 max-w-measure space-y-4 leading-relaxed text-ink-muted">
         <p>

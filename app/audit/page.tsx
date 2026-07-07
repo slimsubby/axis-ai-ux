@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AuditPage() {
   return (
-    <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
+    <div className="mx-auto max-w-[88rem] px-5 py-16 sm:px-8 sm:py-24">
       <h1 className="text-3xl font-semibold tracking-tight">Trust Auditor</h1>
       <p className="mt-4 max-w-measure leading-relaxed text-ink-muted">
         Pick one AI feature (a summariser, an agent, an autocomplete) and
